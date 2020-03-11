@@ -13,4 +13,5 @@ before_install:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker tag vsuzdaltsev/docker-in-docker-ruby:latest
   - docker push vsuzdaltsev/docker-in-docker-ruby:latest
