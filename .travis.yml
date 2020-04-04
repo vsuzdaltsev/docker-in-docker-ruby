@@ -9,8 +9,8 @@ branches:
   - master
 
 before_install:
-  - docker build . -t vsuzdaltsev/docker-in-docker-ruby
+  - docker build . -t vsuzdaltsev/ruby-aws-sdk
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push vsuzdaltsev/docker-in-docker-ruby:latest
+  - docker push vsuzdaltsev/ruby-aws-sdk:latest
